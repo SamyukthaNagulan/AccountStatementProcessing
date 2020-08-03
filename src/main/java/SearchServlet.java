@@ -49,9 +49,9 @@ public class SearchServlet extends HttpServlet {
 			Statement stm=con.createStatement();
 			String sql="update sample set Running_Balance=@b:=@a,Balance=@a:=@b+(Withdrawals-Credit ) where Account_Number="+accno+"  order by Date_Time desc ";
 			int s = stm.executeUpdate(sql);  
+			System.out.println(s);
 			String sql1 = "select Txn_Ref_Number,Account_Number,Date_Time,Description,Withdrawals,Credit,Running_Balance from sample where Account_Number="+accno;
             rs=stmt.executeQuery(sql1);
-            //System.out.println(s);
             out.println("<table border=1 width=40% height=40%>");  
             out.println("<tr><th>Account Number</th><th>Description</th><th>Withdrawals</th><th>Credit</th><th>Running Balance</th><tr>");  
             while (rs.next()) 

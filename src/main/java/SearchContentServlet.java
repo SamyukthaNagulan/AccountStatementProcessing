@@ -23,19 +23,17 @@ public class SearchContentServlet extends HttpServlet {
         out.println("<html><body><center>");
         out.println("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>");
         out.println("<br><br><br><form action='SearchContentServlet'  method='post' width='40%' height='40%'>" + 
-        		"  <input type='text' placeholder='Search..' name='search'>" + 
+        		"  <input type='text' size='40' placeholder='Search..' name='search'>" + 
         		"  <button type='submit'><i class='fa fa-search'></i></button>" + 
         		"</form><br>");
         try 
         { 
+        	String des="";
+        	des=des+accno;
         	Class.forName("com.mysql.cj.jdbc.Driver");  
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "s@myukth@0512");  
             Statement stmt = con.createStatement();  
             ResultSet rs;
-//            String set="set @a:="+a;
-//			rs=stmt.executeQuery(set);
-//			String set1=" set @b:=0";
-//			rs=stmt.executeQuery(set1);
 			String sql = "select Txn_Ref_Number,Account_Number,Date_Time,Description,Withdrawals,Credit from sample where Account_Number="+accno;
             rs = stmt.executeQuery(sql);  
             out.println("<table border=1 width=40% height=40%>");  

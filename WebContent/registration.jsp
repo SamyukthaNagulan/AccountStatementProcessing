@@ -6,10 +6,9 @@
 <body>
 <img src="pic1.jpg">
 	<br>
-	<h1><center>E-STATEMENT PROCESSING</center></h1>
+	<h1>E-STATEMENT PROCESSING</h1>
 	<br>
-	<h2><center>Registration Form</center></h2>
-	<center>
+	<h2>Registration Form</h2>
 	<form action="register" method="post">
 		<pre>
 		<br>
@@ -22,7 +21,7 @@
 		<input type="submit" value="Register" />
 	</pre>
 	</form>
-	</center>
+	
 	${msg}
 
 

@@ -59,7 +59,7 @@ input[type=submit] {
 }
 </style>
 </head>     
-<body align="center">
+<body >
 <br>
 <br>
 <% String msg = (String)request.getAttribute("message");

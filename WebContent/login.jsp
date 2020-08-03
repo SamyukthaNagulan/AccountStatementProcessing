@@ -6,7 +6,7 @@
 <body>
 	<br>
 	<br>
-	<center><h1>Login Form</h1>
+	<h1>Login Form</h1>
 
 	<br>
 	<br>
@@ -21,7 +21,7 @@
 		<input type="submit" value="Login" />
 		</pre>
 	</form>
-	</center>
+	
 	${msg}
 
 </body>

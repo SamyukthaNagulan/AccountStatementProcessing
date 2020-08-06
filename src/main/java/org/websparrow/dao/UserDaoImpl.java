@@ -16,11 +16,11 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public int registerUser(User user) {
 		
-		String sql = "INSERT INTO USER_DATA VALUES(?,?)";
+		String sql = "INSERT INTO USER_DATA VALUES(?,?,?)";
 
 		try {
 			
-			int counter = jdbcTemplate.update(sql, new Object[] { user.getUserId(), user.getPassword() });
+			int counter = jdbcTemplate.update(sql, new Object[] { user.getUserId(), user.getemail(),user.getPassword() });
 
 			return counter;
 

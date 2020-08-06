@@ -18,7 +18,6 @@ public class SearchContentServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();  
 		
 		String accno=request.getParameter("search");
-		System.out.println(accno);
         response.setContentType("text/html");  
         out.println("<html><body><center>");
         out.println("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>");
@@ -28,8 +27,6 @@ public class SearchContentServlet extends HttpServlet {
         		"</form><br>");
         try 
         { 
-        	String des="";
-        	des=des+accno;
         	Class.forName("com.mysql.cj.jdbc.Driver");  
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "s@myukth@0512");  
             Statement stmt = con.createStatement();  
@@ -44,7 +41,6 @@ public class SearchContentServlet extends HttpServlet {
                 String n = rs.getString("Description");  
                 int nm = rs.getInt("Withdrawals");  
                 int cre = rs.getInt("Credit");   
-                //int run=rs.getInt("Running_Balance");
                 out.println("<tr><td>" + acc+"</td><td>"+n + "</td><td>" + nm + "</td><td>" + cre + "</td></tr>");   
             }  
             out.println("</table>");  

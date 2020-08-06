@@ -23,7 +23,7 @@ public class UserLoginController {
 		User user = new User();
 		user.setUserId(userId);
 		user.setPassword(password);
-
+		
 		String name = userDao.loginUser(user);
 
 		if (name != null) {

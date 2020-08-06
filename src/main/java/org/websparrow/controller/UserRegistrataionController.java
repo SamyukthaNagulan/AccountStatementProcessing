@@ -16,7 +16,7 @@ public class UserRegistrataionController {
 	private UserDao userDao;
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public ModelAndView userRegistration(@RequestParam("userId") String userId,
+	public ModelAndView userRegistration(@RequestParam("userId") String userId,@RequestParam("email") String email,
 			@RequestParam("password") String password) {
 
 		ModelAndView mv = new ModelAndView();
@@ -24,7 +24,7 @@ public class UserRegistrataionController {
 		User user = new User();
 		user.setUserId(userId);
 		user.setPassword(password);
-
+		user.setemail(email);
 		int counter = userDao.registerUser(user);
 
 		if (counter > 0) {

@@ -3,7 +3,7 @@ package org.websparrow.model;
 public class User {
 
 	// Generate Getters and Setters...
-	private String userId, password;
+	private String userId, password,email;
 
 	public String getUserId() {
 		return userId;
@@ -19,6 +19,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getemail() {
+		return email;
+	}
+	
+	public void setemail(String email) {
+		this.email=email;
+		
 	}
 
 }

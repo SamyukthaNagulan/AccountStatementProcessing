@@ -1,4 +1,4 @@
-package org.websparrow.controller;
+package org.webproject.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import org.websparrow.dao.UserDao;
-import org.websparrow.model.User;
+import org.webproject.dao.UserDao;
+import org.webproject.model.User;
 
 @Controller
 public class UserRegistrataionController {

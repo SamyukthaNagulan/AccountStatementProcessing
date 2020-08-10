@@ -1,8 +1,7 @@
 <%@ page isELIgnored="false"%>
 <html>
 <head>
-<title>Spring MVC user registration and login example using
-	JdbcTemplate + MySQL</title>
+<title>DASHBOARD</title>
 <style>
 body {
 	background-color: #009cde;
@@ -21,7 +20,6 @@ input[type=file] {
 }
 
 input[type=submit] {
-	border:0;
 	outline: 0;
 	width: 6em;
 	height: 2em;

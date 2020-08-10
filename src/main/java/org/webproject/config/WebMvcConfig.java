@@ -1,4 +1,4 @@
-package org.websparrow.config;
+package org.webproject.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.websparrow.dao.UserDao;
-import org.websparrow.dao.UserDaoImpl;
+import org.webproject.dao.UserDao;
+import org.webproject.dao.UserDaoImpl;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("org.websparrow")
+@ComponentScan("org.webproject")
 public class WebMvcConfig {
 
 	@Bean

@@ -43,7 +43,7 @@ public class FileUpload extends HttpServlet {
 	 }else{
 			request.setAttribute("message","No File found");
 		}
-			        request.getRequestDispatcher("/result.jsp").forward(request, response);
+			        request.getRequestDispatcher("/search.jsp").forward(request, response);
 			        try {
 						Class.forName("com.mysql.cj.jdbc.Driver");
 					} catch (ClassNotFoundException e1) {

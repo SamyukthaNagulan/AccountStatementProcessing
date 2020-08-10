@@ -1,9 +1,9 @@
-package org.websparrow.dao;
+package org.webproject.dao;
 
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.websparrow.model.User;
+import org.webproject.model.User;
 
 public class UserDaoImpl implements UserDao {
 

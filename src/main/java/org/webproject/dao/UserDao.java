@@ -1,6 +1,6 @@
-package org.websparrow.dao;
+package org.webproject.dao;
 
-import org.websparrow.model.User;
+import org.webproject.model.User;
 
 public interface UserDao {
 

@@ -1,4 +1,4 @@
-package org.websparrow.model;
+package org.webproject.model;
 
 public class User {
 

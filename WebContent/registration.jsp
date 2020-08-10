@@ -1,7 +1,7 @@
 <%@ page isELIgnored="false"%>
 <html>
 <head>
-<title>E-Statement</title>
+<title>REGISTRATION</title>
 <style>
 body {
 	background-color: #009cde;
@@ -25,6 +25,7 @@ input[type=text] {
 	outline:0;
 	width: 12em;
 	height: 2em;
+	text-align:center;
 	font-size: 20px;
 	background-color: white;
 	border-radius: 40px/39px;
@@ -32,6 +33,7 @@ input[type=text] {
 
 input[type=email] {
 	outline:0;
+	text-align:center;
 	width: 12em;
 	height: 2em;
 	font-size: 20px;
@@ -51,6 +53,7 @@ a {
 
 input[type=password] {
 	outline:0;
+	text-align:center;
 	width: 12em;
 	height: 2em;
 	font-size: 20px;

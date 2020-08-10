@@ -18,7 +18,7 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 @WebServlet("/Sampleservlet")
-public class Sampleservlet extends HttpServlet {
+public class AccountStatementGeneration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
 		public void doGet(HttpServletRequest request, HttpServletResponse response)

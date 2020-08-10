@@ -1,7 +1,7 @@
 <%@ page isELIgnored="false"%>
 <html>
 <head>
-<title>Login Page</title>
+<title>LOGIN</title>
 <style>
 body {
 	background-color: #009cde;
@@ -32,7 +32,7 @@ pre {
 
 input[type=text] {
 	outline:0;
-	border: 0;
+	text-align:center;
 	width: 12em;
 	height: 2em;
 	font-size: 20px;
@@ -42,7 +42,7 @@ input[type=text] {
 
 input[type=password] {
 	outline:0;
-	border: 0;
+	text-align:center;
 	width: 12em;
 	height: 2em;
 	font-size: 20px;
@@ -52,7 +52,6 @@ input[type=password] {
 
 input[type=submit] {
 	outline:0;
-	border: 0;
 	width: 6em;
 	height: 2em;
 	font-size: 20px;
@@ -62,7 +61,6 @@ input[type=submit] {
 
 button {
 	outline:0;
-	border: none;
 	width: 6em;
 	height: 2em;
 	font-size: 20px;

@@ -1,7 +1,7 @@
 <%@ page isELIgnored="false"%>
 <html>
 <head>
-<title>Search</title>
+<title>SEARCH</title>
 <style>
 body {
 	background-color: #009cde;
@@ -24,7 +24,6 @@ input[type=text] {
 input[type=submit] { 
 	width: 6em;
 	height: 2em;  
-	border:0;
 	outline:0;
 	size:20px;
 	font-size: 20px;

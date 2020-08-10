@@ -1,4 +1,4 @@
-package org.websparrow.config;
+package org.webproject.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

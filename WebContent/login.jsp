@@ -78,7 +78,7 @@ button {
 	<br>
 	<form action="login" method="post">
 		<pre>
-		 <strong>Login Here | <a href="registration.jsp">Click here to Register</a></strong>
+		 <strong>Login Here | <a href="index.jsp">Click here to Register</a></strong>
 		<br>
 		Email Id: <input type="text" name="email" />
 		<br>

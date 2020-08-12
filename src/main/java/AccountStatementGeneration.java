@@ -88,6 +88,7 @@ public class AccountStatementGeneration extends HttpServlet {
 	    stmt.close(); 
 	    conn.close();
 	    PrintWriter out=response.getWriter();
+	    out.println("<html><head><title>ACCOUNT STATEMENT DOWNLOAD</title></head></html>");
 		out.println("<h1>"+"Account Statement downloaded successfully"+"</h1>");
 		
 		//get path of the downloaded file

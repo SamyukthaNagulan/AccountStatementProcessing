@@ -10,7 +10,7 @@ import org.webproject.dao.UserDao;
 import org.webproject.model.User;
 
 @Controller
-public class UserRegistrataionController {
+public class UserRegistrationController {
 
 	@Autowired
 	private UserDao userDao;
@@ -33,7 +33,7 @@ public class UserRegistrataionController {
 			mv.addObject("msg", "Error- check the console log.");
 		}
 
-		mv.setViewName("registration");
+		mv.setViewName("index");
 
 		return mv;
 

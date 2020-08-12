@@ -33,7 +33,7 @@ public class UserRegistrationController {
 			mv.addObject("msg", "Error- check the console log.");
 		}
 
-		mv.setViewName("index");
+		mv.setViewName("registration");
 
 		return mv;
 

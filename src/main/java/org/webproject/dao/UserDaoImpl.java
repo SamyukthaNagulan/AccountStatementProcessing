@@ -14,9 +14,10 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public int registerUser(User user) {
+	public int registerUser(User user)
+	{
 		
-		String sql = "INSERT INTO USER_DATA VALUES(?,?,?)";
+		String sql = "INSERT INTO USER_DATA VALUES(?,?,AES_ENCRYPT(?,'123'))";
 
 		try {
 			
@@ -33,16 +34,17 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public String loginUser(User user) {
 		
-		String sql = "SELECT USER_ID FROM USER_DATA WHERE USER_ID=? AND USER_PASS=?";
-		
+		String sql = "SELECT USER_ID FROM USER_DATA WHERE USER_EMAIL=? AND CAST(AES_DECRYPT(USER_PASS,'123')as CHAR)=?";
 		try {
 
 			String userId = jdbcTemplate.queryForObject(sql, new Object[] {
-					user.getUserId(), user.getPassword() }, String.class);
+					user.getemail(), user.getPassword() }, String.class);
 
 			return userId;
 			
 		} catch (Exception e) {
+			System.out.println("Error");
+			e.printStackTrace();
 			return null;
 		}
 	}

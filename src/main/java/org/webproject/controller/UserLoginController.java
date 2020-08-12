@@ -16,12 +16,12 @@ public class UserLoginController {
 	private UserDao userDao;
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public ModelAndView userLogin(@RequestParam("userId") String userId, @RequestParam("password") String password) {
+	public ModelAndView userLogin(@RequestParam("email") String email, @RequestParam("password") String password) {
 
 		ModelAndView mv = new ModelAndView();
 
 		User user = new User();
-		user.setUserId(userId);
+		user.setemail(email);
 		user.setPassword(password);
 		
 		String name = userDao.loginUser(user);

@@ -6,6 +6,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import java.io.File;
 import java.io.FileOutputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -33,9 +35,11 @@ public class AccountStatementGeneration extends HttpServlet {
 			ResultSet query_set = stmt.executeQuery("select Txn_Ref_Number,Account_Number,Date_Time,Description,Withdrawals,Credit,Running_Balance from sample");
 	    /* Step-2: Initialize PDF documents - logical objects */
 			Document my_pdf_report = new Document();
-			PdfWriter.getInstance(my_pdf_report, new FileOutputStream("C:\\csv\\pdf_report.pdf"));
+			PdfWriter.getInstance(my_pdf_report, new FileOutputStream("pdf_report.pdf"));
 			my_pdf_report.open();            
 	    //we have four columns in our table
+			
+			
 			PdfPTable my_report_table = new PdfPTable(7);
 	    //create a cell object
 			PdfPCell table_cell;
@@ -85,6 +89,12 @@ public class AccountStatementGeneration extends HttpServlet {
 	    conn.close();
 	    PrintWriter out=response.getWriter();
 		out.println("<h1>"+"Account Statement downloaded successfully"+"</h1>");
+		
+		//get path of the downloaded file
+		File f=new File("pdf_report.pdf");
+		String abs=f.getAbsolutePath();
+		System.out.println(abs);
+		
 		}
 		catch(Exception e)
 		{

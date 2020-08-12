@@ -23,8 +23,8 @@ public class UserRegistrataionController {
 
 		User user = new User();
 		user.setUserId(userId);
-		user.setPassword(password);
 		user.setemail(email);
+		user.setPassword(password);
 		int counter = userDao.registerUser(user);
 
 		if (counter > 0) {

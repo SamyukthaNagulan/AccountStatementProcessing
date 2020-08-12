@@ -80,7 +80,7 @@ button {
 		<pre>
 		 <strong>Login Here | <a href="registration.jsp">Click here to Register</a></strong>
 		<br>
-		User Id: <input type="text" name="userId" />
+		Email Id: <input type="text" name="email" />
 		<br>
 		Password: <input type="password" name="password" />
 		<br>
